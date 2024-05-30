@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,16 @@ import { AuthService } from '../../core/services/auth.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loginError: string = '';
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    const loggedIn = localStorage.getItem('currentUser');
+    if (loggedIn) {
+      this.router.navigate(['/feed']);
+    }
+  }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -27,8 +37,8 @@ export class LoginComponent implements OnInit {
           console.log('Login successful', response);
           // Optionally, you can navigate to another route upon successful login
         },
-        (error) => {
-          console.error('Login failed', error);
+        (err) => {
+          console.error('Login failed', err);
           this.loginError = 'Invalid email or password'; // Set an error message to display to the user
         }
       );
