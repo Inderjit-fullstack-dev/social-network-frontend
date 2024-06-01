@@ -5,4 +5,7 @@ export const endpoints = {
     create: `${baseURL}/Posts/CreatePost`,
     list: `${baseURL}/Posts/GetPosts`,
   },
+  comment: {
+    create: `${baseURL}/Posts/CreateComment`,
+  },
 };

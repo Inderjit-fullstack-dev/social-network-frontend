@@ -1,0 +1,4 @@
+<form [formGroup]="form">
+    <input type="text" class="post-form form-control" name="commentBody" id="commentBody"
+        placeholder="Write your comment..." formControlName="commentBody" (keyup.enter)="onSubmit()" />
+</form>

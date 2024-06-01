@@ -10,6 +10,8 @@ import { AuthService } from '../../../core/services/auth.service';
   styleUrl: './postlist.component.css',
 })
 export class PostlistComponent implements OnInit {
+  posts: Post[];
+
   constructor(
     private postService: PostService,
     private authService: AuthService
@@ -18,8 +20,6 @@ export class PostlistComponent implements OnInit {
   ngOnInit(): void {
     this.getPosts();
   }
-
-  posts: Post[];
 
   getPosts() {
     const userId = this.authService.getUserId();

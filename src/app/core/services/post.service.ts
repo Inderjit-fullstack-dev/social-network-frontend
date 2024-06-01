@@ -21,4 +21,8 @@ export class PostService {
       `${endpoints.post.list}/${userId}`
     );
   }
+
+  createComment(request: any): Observable<any> {
+    return this.http.post(endpoints.comment.create, request);
+  }
 }

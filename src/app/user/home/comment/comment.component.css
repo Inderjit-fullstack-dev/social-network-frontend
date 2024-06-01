@@ -1,0 +1,27 @@
+.comment-container {
+  display: flex;
+}
+
+.comment-container a {
+  text-transform: capitalize;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  top: 5px;
+  font-size: 13px;
+}
+
+.comment-body {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+}
+
+.comment-datetime {
+  font-size: 10px;
+  color: #666;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}

@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostService } from '../core/services/post.service';
 import { AuthService } from '../core/services/auth.service';
+import { CommentComponent } from './home/comment/comment.component';
+import { CommentListComponent } from './home/comment-list/comment-list.component';
+import { CommentFormComponent } from './home/comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { AuthService } from '../core/services/auth.service';
     PostlistComponent,
     HomeComponent,
     ProfileComponent,
+    CommentComponent,
+    CommentListComponent,
+    CommentFormComponent,
   ],
   imports: [
     CommonModule,
