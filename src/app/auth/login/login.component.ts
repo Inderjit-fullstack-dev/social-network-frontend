@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ) {
     const loggedIn = localStorage.getItem('currentUser');
     if (loggedIn) {
-      this.router.navigate(['/feed']);
+      this.router.navigate(['/']);
     }
   }
 

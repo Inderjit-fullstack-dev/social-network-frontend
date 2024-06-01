@@ -25,6 +25,29 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
+  public getUserId(): number {
+    const currentUser = localStorage.getItem('currentUser');
+
+    const user = JSON.parse(currentUser) as User;
+
+    if (currentUser == null) {
+      this.logout();
+    }
+
+    return user.id;
+  }
+
+  public getCurrentUser(): User {
+    const currentUser = localStorage.getItem('currentUser');
+
+    const user = JSON.parse(currentUser) as User;
+
+    if (currentUser == null) {
+      this.logout();
+    }
+    return user;
+  }
+
   login(email: string, password: string): Observable<APIResponse<User>> {
     return this.http
       .post<APIResponse<User>>(endpoints.login, { email, password })
@@ -33,7 +56,7 @@ export class AuthService {
           if (response && response.data) {
             localStorage.setItem('currentUser', JSON.stringify(response.data));
             this.currentUserSubject.next(response);
-            this.router.navigate(['/feed']);
+            this.router.navigate(['/']);
           }
           return response;
         })

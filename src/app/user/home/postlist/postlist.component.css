@@ -1,0 +1,40 @@
+/*-- Global Selectors --*/
+a {
+  color: #47649f;
+}
+
+body {
+  font-family: "helvetica";
+}
+
+/*-- Bootstrap Override Style --*/
+
+/*-- Content Style --*/
+.post-footer-option li {
+  float: left;
+  margin-right: 50px;
+  padding-bottom: 15px;
+}
+
+.post-footer-option li a {
+  color: #afb4bd;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.photo-profile {
+  border: 1px solid #ddd;
+}
+
+.anchor-username h4 {
+  font-weight: bold;
+}
+
+.anchor-time {
+  color: #adb2bb;
+  font-size: 1.2rem;
+}
+
+.post-footer-comment-wrapper {
+  background-color: #f6f7f8;
+}

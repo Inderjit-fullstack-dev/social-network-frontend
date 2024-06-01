@@ -1,0 +1,21 @@
+.post-wrapper {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.post-form {
+  resize: none;
+  border-radius: 2px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+
+.icon-wrapper svg {
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<div class="card mb-1" *ngFor="let p of posts">
+    <div class="card-body">
+        <section class="post-heading">
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object rounded-circle photo-profile"
+                                    src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g"
+                                    width="40" height="40" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#" class="anchor-username">
+                                <h4 class="media-heading">{{ p.username }}</h4>
+                            </a>
+                            <a href="#" class="anchor-time">{{ p.createDate }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <a href="#"><i class="bi bi-chevron-down"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="post-body">
+            <p>{{ p.postBody }}</p>
+        </section>
+        <!-- <section class="post-footer">
+            <hr>
+            <div class="post-footer-option container">
+                <ul class="list-unstyled d-flex">
+                    <li><a href="#"><i class="bi bi-hand-thumbs-up"></i> Like</a></li>
+                    <li><a href="#"><i class="bi bi-chat-dots"></i> Comment</a></li>
+                    <li><a href="#"><i class="bi bi-arrow-repeat"></i> Share</a></li>
+                </ul>
+            </div>
+        </section> -->
+    </div>
+</div>
